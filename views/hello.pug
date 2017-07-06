@@ -1,0 +1,22 @@
+//- h2 
+//-   | Test Page
+//-   h1 My husband's name is #{name}
+//-     - const imageText = image.toUpperCase();
+//-     img(src='../public/images/photos/1.jpg' alt=`${imageText}`)
+//-     p He is #{age} years old and is my #{role}.
+//-     p This is static test text
+
+//- one main layout (front-end/customa back-end) and then you extend the layout on custom pages i.e. header
+
+extends layout
+
+
+block content
+  - const timestamp = h.moment().endOf('day').fromNow();
+
+  h2 Testing Content Block 
+    p Sale ends #{timestamp}
+    p #{h.moment().format("dddd, MMMM Do YYYY, h:mm:ss a")}
+
+block footer
+  p This is the footer area

@@ -1,0 +1,11 @@
+extends layout
+  
+block content
+  - const timestamp = h.moment().endOf('day').fromNow();
+
+  h2 #{title}
+    p testing, testing 
+
+  h2 Testing Content Block on Index Page
+    p Sale ends #{timestamp}
+    p #{h.moment().format("dddd, MMMM Do YYYY, h:mm:ss a")}
